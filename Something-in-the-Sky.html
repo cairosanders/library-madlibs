@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jungle Adventure</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Something in the Sky</h1>
+    </header>
+
+    <main>
+
+    <form id="madlibForm">
+        <div class="input-group"><label>Type of Weather: <input type="text" name="weather"></label></div>
+        <div class="input-group"><label>Adjective: <input type="text" name="adjective1"></label></div>
+        <div class="input-group"><label>Library Unit: <input type="text" name="libraryUnit"></label></div>
+        <div class="input-group"><label>Another Adjective: <input type="text" name="adjective2"></label></div>
+        <div class="input-group"><label>Person who works in the library: <input type="text" name="personInLibrary"></label></div>
+        <div class="input-group"><label>Weird Food: <input type="text" name="weirdFood"></label></div>
+        <div class="input-group"><label>Noun (plural): <input type="text" name="nounPlural"></label></div>
+        <div class="input-group"><label>Verb (past tense): <input type="text" name="verb"></label></div>
+        <div class="input-group"><label>Room in the Library: <input type="text" name="roomInLibrary"></label></div>
+        <div class="input-group"><label>Vessel: <input type="text" name="vessel"></label></div>
+        <div class="input-group"><label>Verb (past tense): <input type="text" name="verbPast"></label></div>
+        <div class="input-group"><label>Adverb: <input type="text" name="adverb"></label></div>
+        <div class="input-group"><label>Stage of Degree: <input type="text" name="stageOfDegree"></label></div>
+        <div class="input-group"><label>Department: <input type="text" name="department"></label></div>
+        <div class="input-group"><label>Another Library Unit: <input type="text" name="anotherLibraryUnit"></label></div>
+        <div class="input-group"><label>Different Type of Vessel: <input type="text" name="differentVessel"></label></div>
+        <div class="input-group"><label>Place on Campus: <input type="text" name="placeOnCampus"></label></div>
+        <button type="button" onclick="generateMadlib()">Generate Story</button>
+    </form>
+
+      <div id="story"></div>
+    </main>
+
+    <footer>
+      <p>More <a href="index.html">Library Mad Libs</a></p>
+    </footer>
+  </div>
+
+  <script>
+
+    function generateMadlib() {
+            const form = document.forms['madlibForm'];
+            const story = `It was a ${form.weather.value}y afternoon at the Means-McPherson Library. Everything seemed ${form.adjective1.value}, but little did the staff at ${form.libraryUnit.value} know, something ${form.adjective2.value} was about to happen. ${form.personInLibrary.value} was having a late lunch, their usual, ${form.weirdFood.value}, when they saw something through the window. Outside, ${form.nounPlural.value} were falling from the sky. ${form.personInLibrary.value} ${form.verb.value} quickly from their chair. They went to the ${form.roomInLibrary.value} and got a ${form.vessel.value}. They ${form.verbPast.value} out the front door. ${form.adverb.value} they tried to catch the ${form.nounPlural.value} in the ${form.vessel.value} to no avail. A group of ${form.stageOfDegree.value} ${form.department.value} students ran up to help, but couldn’t do much as there was only one ${form.vessel.value}. Luckily, the staff from ${form.anotherLibraryUnit.value} saw what was happening and came out to help with ${form.differentVessel.value}. Together they caught all the ${form.nounPlural.value} and returned them back to ${form.placeOnCampus.value}, where they belong.`;
+
+            document.getElementById('story').textContent = story;
+        }
+
+  </script>
+</body>
+</html>
